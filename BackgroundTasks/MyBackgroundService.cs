@@ -29,7 +29,7 @@ namespace BackgroundTasks
 
                     _logger.LogInformation("From MyBackgroundService: ExecuteAsync {dateTime}", DateTime.Now);
                     var scopeService = scope.ServiceProvider.GetRequiredService<IScopedService>();
-                    scopeService.Write();
+                        scopeService.Write();
                     await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
                 }
             }
